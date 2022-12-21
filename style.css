@@ -18,8 +18,27 @@ header > h1{
     font-family: sans-serif;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+ #user-choice {
+    margin-right: 170px;
+    padding: 30px;
+    font-size: 2rem;
+    
+}
+
+ #comp-choice {
+    margin-left: 170px;
+    padding: 30px;
+    font-size: 2rem;
+}
+
 .score-board {
-    margin: 140px auto;
+    
     border: 3px solid white;
     width: 200px;
     color: white;

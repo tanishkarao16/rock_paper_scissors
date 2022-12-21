@@ -9,6 +9,8 @@ const rock_div = document.getElementById('r');
 const paper_div = document.getElementById('p');
 const scissor_div = document.getElementById('s');
 let final_result_div = document.getElementById('final-result');
+let user_choice_div = document.getElementById('user-choice');
+let comp_choice_div = document.getElementById('comp-choice');
 
 function compChoice() {
     const choice = ['r', 'p' , 's'];
@@ -23,6 +25,12 @@ function changeToWord(letter)
     else if(letter == 'p') return 'Paper';
     else return 'Scissor';
 }
+function toImage(letter)
+{
+    if(letter == 'r') return '🪨';
+    else if(letter == 'p') return '📜';
+    else return '✂️';
+}
 
 function wins(userChoice, compChoice)
 {
@@ -33,6 +41,8 @@ function wins(userChoice, compChoice)
     result_comp.innerHTML=changeToWord(compChoice)
     console.log('wins')
     final_result_div.innerHTML='USER WON'
+    user_choice_div.innerHTML=toImage(userChoice);
+    comp_choice_div.innerHTML=toImage(compChoice);
     
 }
 
@@ -44,6 +54,8 @@ function loss(userChoice, computerChoice) {
     result_comp.innerHTML=changeToWord(computerChoice)
     console.log('loss')
     final_result_div.innerHTML='USER LOST'
+    user_choice_div.innerHTML=toImage(userChoice);
+    comp_choice_div.innerHTML=toImage(computerChoice);
 
 }
 
@@ -54,6 +66,8 @@ function draw(userChoice, computerChoice) {
     result_comp.innerHTML=changeToWord(computerChoice)
     console.log('draw')
     final_result_div.innerHTML="IT'S A DRAWW!"
+    user_choice_div.innerHTML=toImage(userChoice);
+    comp_choice_div.innerHTML=toImage(computerChoice);
 
 }
 
